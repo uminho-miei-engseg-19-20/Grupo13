@@ -111,7 +111,7 @@ dsXOlK32erY5tL20MvKfgTNXlVAQg7brZEtTTb/Z14BMc9cReYDlLQGl
 
 A diferença entre as duas é a seguinte:
 
- Enquanto que **recoverSecretFromComponents-app.py** pede apenas o minimo de componentes (quorom) para reconstruir o segredo, **recoverSecretFromAllComponents-app.py** pede todos os componentes em qual o segredo foi dividido para poder reconstruir
+ Enquanto que **recoverSecretFromComponents-app.py** pede apenas o minimo de componentes (quorum) para reconstruir o segredo, **recoverSecretFromAllComponents-app.py** pede todos os componentes em qual o segredo foi dividido para poder reconstruir
 
 Eis o resultado:
 ```bash
