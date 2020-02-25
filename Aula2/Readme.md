@@ -142,7 +142,8 @@ Sendo que **recoverSecretFromComponents-app.py** apenas necessita do numero mini
 Por exemplo, um codigo de acesso de uma conta bancária, partilhado por uma familia de 3, onde este segredo é divido em 3 com um quorum de 2, sendo que seria sempre necessário dois elementos para aceder à conta (mãe-pai, pai-filho, mae-filho) e evitar mau uso por parte de um único elemento.
 
 
- **recoverSecretFromAllComponents-app.py** pede todos os componentes em qual o segredo foi dividido para poder reconstruir, logo o caso mais util deste seria quando o segredo que este esconde só podesse ser revelado caso todas as partes que possuem cada componente concordassem em revelar o segredo
+ **recoverSecretFromAllComponents-app.py** pede todos os componentes em qual o segredo foi dividido para poder reconstruir, logo o caso mais util deste seria quando o segredo que este esconde só podesse ser revelado caso todas as partes que possuem cada componente concordassem em revelar o segredo.
+ 
  Um exemplo (exagerado) de um bom caso de uso poderia ser para esconder os codigos de lançamento de uma bomba nuclear.
  Para poder ter acesso ao codigo, cada pessoa que possuisse um componente teria de concordar em transmitir o seu para que o segredo fosse revelado.
  
