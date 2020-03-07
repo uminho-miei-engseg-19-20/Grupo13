@@ -388,6 +388,7 @@ python ssh-audit.py 146.152.205.96
 **Indique o software e versão utilizada pelos servidores ssh.**
 
 Como é possível observar nas imagens acima, o software e versão utilizada pelos servidores ssh são:
+
 **Empresa 1:**
 - 146.152.205.96 – Intel Corporation
 - Software: OpenSSH
