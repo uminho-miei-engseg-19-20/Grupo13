@@ -1,9 +1,13 @@
 ## [Questão 1](Questao1)
 
 [init-app.py](Questao1/init-app.py)
+
 [blindSignature-app.py](Questao1/blindSignature-app.py)
+
 [ofusca-app.py](Questao1/ofusca-app.py)
+
 [desofusca-app.py](Questao1/desofusca-app.py)
+
 [verify-app.py](Questao1/verify-app.py)
 
 ## Experiência 2.1
