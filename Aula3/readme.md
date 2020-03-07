@@ -248,16 +248,16 @@ python ssh-audit.py 146.152.205.96
 (rec) -hmac-md5                    -- mac algorithm to remove
 ```
 
-Intel Corporation
-146.152.205.96
-Versão: SSH-2.0
+**Intel Corporation**
+- 146.152.205.96
+- Versão: SSH-2.0
 
 ![intel](Imagens/intel.png)
 ![intel2](Imagens/intel2.png)
 
-Facebook-Corp
-163.113.130.49
-Versão: SSH-2.0
+**Facebook-Corp**
+- 163.113.130.49
+- Versão: SSH-2.0
 
 ![facebook](Imagens/facebook.png)
 ![facebook2](Imagens/facebook2.png)
@@ -403,13 +403,16 @@ Como é possível observar nas imagens acima, o software e versão utilizada pel
 Através de uma busca por CVE no NVD(National vulnerability DataBase) e recorrendo ao próprio shodan podemos concluir que a versão 7.4 possui já duas vulnerabilidades descobertas e publicadas enquanto que a versão 8.0 ainda não possui quaisquer vulnerabilidades publicadas. Os CVE’s das vulnerabilidades podem ser observadas na imagem abaixo.
 
 ![applevul](Imagens/applevul.png)
+
 Figura. - Vulnerabilidades encontradas – Apple Tecnologies LLC 
+
 
 ## Questão 3.1.4
 
 **E qual tem a vulnerabilidade mais grave (de acordo com o CVSS score identificado no CVE details)?**
 
 A vulnerabilidade com o CVE-2018-15919 é considerada mais grave dentro das enumeradas, esta possui um CVSS score na versão 3.x de 5.3(Medium) e na versão 2.0 um apontuaçao semelhante de 5.0(Medium), enquanto que a outra é apenas considerada baixa em termo de gravidade, com uma pontuaçao de 3.0.
+
 
 ## Questão 3.1.5
 
