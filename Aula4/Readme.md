@@ -19,10 +19,15 @@ Ao usar o comando sudo anonsurf start forçamos o encerramento do browser caso e
 ```
 
 3-
+
 Após isto, verificamos novamente a localização do nosso ip, este mudou.
+
 4-5
+
 Com o comando sudo anonsurf change voltamos a mudar.
+
 6-7
+
 E com o comando sudo anonsurf stop terminamos a navegação anonima e voltamos a ter o ip inicial, obtemos o seguinte do terminal:
 
 ```bash
