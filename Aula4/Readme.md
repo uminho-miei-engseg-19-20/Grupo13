@@ -2,7 +2,7 @@
 
 1-2
 
-Ao usar o comando sudo anonsurf start forçamos o encerramento do browser caso ele esteja aberto, elimina alguns elementos da cache que podem ser perigosos e encerra os serviços IPv6 e começamos então a navegar em modo anonimo, como é se pode ver no output que nos foi dado no terminal.
+Ao usar o comando sudo anonsurf start forçamos o encerramento do browser caso ele esteja aberto, elimina alguns elementos da cache que podem ser perigosos e encerra os serviços IPv6 e começamos então a navegar em modo anonimo, como se pode observar no output que nos foi dado no terminal.
 
 ```bash
 * killing dangerous applications
@@ -52,7 +52,7 @@ E com o comando sudo anonsurf stop terminamos a navegação anonima e voltamos a
 
 Resposta:
 
-Não, com este comando apenas sabemos que seremos ligados a uma outra maquina aleatoria, deste modo não é possível garantir a localização precisa.
+Não, com este comando apenas sabemos que seremos ligados a uma outra máquina aleatoria, deste modo não é possível garantir a localização precisa.
 
 
 
@@ -60,15 +60,15 @@ Não, com este comando apenas sabemos que seremos ligados a uma outra maquina al
 
 Resposta:
 
-Isto acontece, pois o protocolo em questão faz uso dum roteamento por camadas, usa a rede voluntaria de servidores do projeto, que se encontram espalhados pelo globo, a partir dai ele cria circuitos, estes que servem para “trafegarem” os dados do usuário. Neste sentido, estes circuitos tem um tempo de duraçao e são selecionados a partir de um algoritmo. 
-Como não possuimos controlo sobre os circuitos estes encontram-se sempre em mudança, impossibilitando assim garantir uma localizaçao geografica de todos os nós, consequentemente não garantimos que a a localizaçao do nosso ip se encontre nos EUA.
+Isto acontece, pois o protocolo em questão faz uso dum roteamento por camadas, usa a rede voluntária de servidores do projeto, que se encontram espalhados pelo globo, a partir dai ele cria circuitos, estes que servem para “trafegarem” os dados do usuário. Neste sentido, estes circuitos tem um tempo de duração e são selecionados a partir de um algoritmo. 
+Como não possuimos controlo sobre os circuitos estes encontram-se sempre em mudança, impossibilitando assim garantir uma localizaçao geografica de todos os nós, consequentemente não garantimos que a localização do nosso ip se encontre nos EUA.
 
 
 ## Experiência 1.2
 
 ![ex12](Imagens/ex12.png)
 
-Como se pode verificar pelas imagens acima, por cada nova conexão feita pelo Tor Browser é realizado um novo redirecionamento dos pacotes trocados entre as duas entidades. O que podemos afirmar é que á uma constante mudança na camada de redirecionamento, além disso como não se trata de um servidor que faça uso do protocolo em estudo, verificamos que apenas foram feitos 3 saltos(sem relay). 
+Como se pode verificar pelas imagens acima, por cada nova conexão feita pelo Tor Browser é realizado um novo redirecionamento dos pacotes trocados entre as duas entidades. O que podemos afirmar é que á uma constante mudança na camada de redirecionamento, além disso como não se trata de um servidor que faz uso do protocolo em estudo, verificamos que apenas foram feitos 3 saltos(sem relay). 
 
 
 ## Questão 1.2.1
