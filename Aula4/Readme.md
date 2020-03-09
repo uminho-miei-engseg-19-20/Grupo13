@@ -1,6 +1,6 @@
 ## Experiencia 1.1
 
-#### 1-2
+1-2
 
 Ao usar o comando sudo anonsurf start forçamos o encerramento do browser caso ele esteja aberto, elimina alguns elementos da cache que podem ser perigosos e encerra os serviços IPv6 e começamos então a navegar em modo anonimo, como é se pode ver no output que nos foi dado no terminal.
 
