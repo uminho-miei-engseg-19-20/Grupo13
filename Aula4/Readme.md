@@ -16,6 +16,7 @@ Ao usar o comando sudo anonsurf start forçamos o encerramento do browser caso e
  * All traffic was redirected through Tor
 
 [ i ] You are under AnonSurf tunnel
+```
 
 3-
 Após isto, verificamos novamente a localização do nosso ip, este mudou.
@@ -24,6 +25,7 @@ Com o comando sudo anonsurf change voltamos a mudar.
 6-7
 E com o comando sudo anonsurf stop terminamos a navegação anonima e voltamos a ter o ip inicial, obtemos o seguinte do terminal:
 
+```bash
 * killing dangerous applications
  * cleaning some dangerous cache elements
 [ i ] Stopping anonymous mode:
