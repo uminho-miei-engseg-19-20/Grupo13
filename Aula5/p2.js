@@ -7,22 +7,32 @@ class Block{
         this.data = data;
         this.previousHash = previousHash;
         this.hash = this.calculateHash();
+        this.nonce = 0;
     }
     
     calculateHash(){
-        return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)).toString();
+        return SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data) + this.nonce).toString();
     }
+    
+    mineBlock(difficulty){
+        while(this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")){
+            this.nonce++;
+            this.hash = this.calculateHash();
+        }
+        
+        console.log("Block mined: " + this.hash);
     }
-
+}
 
 
 class Blockchain{
     constructor(){
         this.chain = [this.createGenesisBlock()];
+        this.difficulty = parseInt(process.argv[2]);
     }
     
     createGenesisBlock(){
-        return new Block(0, Date(), "Bloco inicial da koreCoin", "0");
+        return new Block(0, "02/01/2018", "Genesis Block", "0");
     }
     
     getlatestBlock(){
@@ -31,7 +41,8 @@ class Blockchain{
     
     addBlock(newBlock){
         newBlock.previousHash = this.getlatestBlock().hash;
-        newBlock.hash = newBlock.calculateHash();
+        newBlock.mineBlock(this.difficulty);
+        //newBlock.hash = newBlock.calculateHash();
         this.chain.push(newBlock);
     } //In reality we cannot add a new block so easily. There are numerous checks in place like 'Proof of work', 'Proof of stake' etc.
     
@@ -57,22 +68,10 @@ class Blockchain{
 
 
 let koreCoin = new Blockchain();
-
+console.log("difficulty " + koreCoin.difficulty)
+console.log('Mining block 1...');
 koreCoin.addBlock(new Block (1, "01/01/2018", {amount: 20}));
+console.log('Mining block 2...');
 koreCoin.addBlock(new Block (2, "02/01/2018", {amount: 40}));
+console.log('Mining block 3...');
 koreCoin.addBlock(new Block (3, "02/01/2018", {amount: 40}));
-
-koreCoin.addBlock(new Block (4, "02/01/2018", {amount: 100}));
-koreCoin.addBlock(new Block (5, "02/01/2018", {amount: 200}));
-koreCoin.addBlock(new Block (6, "02/01/2018", {amount: 500}));
-koreCoin.addBlock(new Block (7, "02/01/2018", {amount: 1000}));
-
-console.log(JSON.stringify(koreCoin, null, 4));
-
-console.log('Is Blockchain valid? ' + koreCoin.isChainValid());
-
-//tampering with blockchain
-koreCoin.chain[1].data = { amount: 100 };
-console.log("tampering with data...");
-koreCoin.chain[1].hash = koreCoin.chain[1].calculateHash();
-console.log('Is Blockchain valid? ' + koreCoin.isChainValid());
