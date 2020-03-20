@@ -17,6 +17,17 @@ para:
     }
 ```
 
-Sendo que ```javascript Date()``` 
+Sendo que ```Date()``` dá-nos o dia atual, e a hora.
 
 O output será algo assim:
+
+```bash
+"chain": [
+        {
+            "index": 0,
+            "timestamp": "Fri Mar 20 2020 21:31:19 GMT+0000 (GMT)",
+            "data": "Bloco inicial da koreCoin",
+            "previousHash": "0",
+            "hash": "5373580d3e1a5ccd906bd11afb9b7a60f7937657023d1d929ec483c86969b1f3"
+        },
+```
