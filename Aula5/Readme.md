@@ -131,7 +131,7 @@ class Blockchain{
         this.chain = [this.createGenesisBlock()];
         this.difficulty = parseInt(process.argv[2]);
     }
-
+```
 O output:
 
 ```bash
