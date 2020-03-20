@@ -123,7 +123,7 @@ O output:
 #### 2.1
 
 Primeiramente, para simplificar a mudança de dificuldade, recebemos o valor como argumento da linha de comandos.
-Para isso mudamos no construtor da class ```Blockchain()``` para o seguinte:
+Para isso mudamos no construtor da ```class Blockchain()``` para o seguinte:
 
 ```javascript
 class Blockchain{
@@ -187,3 +187,44 @@ real    0m20,328s
 user    0m20,489s
 sys     0m0,283s
 ```
+
+Podemos verificar que à medida que a dificuldade aumenta, o tempo de processamento aumenta também.
+Isto deve-se ao facto de que à medida que a dificuldade aumenta (neste caso a dificuldade traduz-se no numero de zeros por qual a hash começa, então 001 é mais dificil que 01) o número de soluções disponiveis diminui,e como não conseguimos influenciar o valor de uma hash, o sistema necessita de encontrar um valor de hash que comece com x número de zeros, o que requer mais poder de processamento, e como tal demorará mais tempo.
+
+
+#### 2.2
+
+O código do proof of work é o seguinte:
+
+```python
+def proof_of_work(last_proof):
+  # Create a variable that we will use to find
+  # our next proof of work
+  incrementor = last_proof + 1
+  # Keep incrementing the incrementor until
+  # it's equal to a number divisible by 9
+  # and the proof of work of the previous
+  # block in the chain
+  while not (incrementor % 9 == 0 and incrementor % last_proof == 0):
+    incrementor += 1
+  # Once that number is found,
+  # we can return it as a proof
+  # of our work
+  return incrementor
+```
+
+Isto traduzido corresponde ao seguinte:
+ 
+Quando o valor atual(incrementor) seja divisivel por 9 e divisivel pelo valor do Proof of Work anterior, o valor atual é devolvido como Proof of Work.
+O algoritmo implementado consiste no mínimo múltiplo comum de 9 e do valor do Proof of Work anteiror.
+
+O algoritmo implementado não serviria para minerar devido ao facto de:
+
+- Não requer elevado poder computacional
+- Ser de fácil resolução
+- A complexidade é linear em relação à ultima solução
+- As Proof of Work dependem da anterior, permitindo calcular as seguintes
+
+
+
+
