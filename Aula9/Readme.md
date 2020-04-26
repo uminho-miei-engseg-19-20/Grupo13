@@ -1,7 +1,11 @@
 ## Pergunta 1
 
 
+
+
 ### Pergunta 1.1
+
+
 
 
 O algoritmo tem o comportamento de armazenar numa lista(buffer) uma quantidade   
@@ -15,26 +19,38 @@ determina  o numero máximo de números no buffer.
 2º recebe um input de numeros que queremos colocar nesse buffer.  
 3º Na execuçao, se colocar-mos um valor superior a 10 numeros, o programa devolverá um erro de index, neste caso index fora de range.  
 
+
 ![image1.1](Imagens/overflow.png)
+
+
 
 
 
 #### Java
 
+
+
 No programa java foram observadas as seguintes exceçoes:  
+
 
 Ao introduzir um inteiro superior a 10 no primeiro input, ao chegar ao 11 elemento, obtemos a seguinte exceção:  
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10  
 Variavel inicial que impossibilita inserir além do tamanho do buffer.  
   
+
 Ao introduzir um numero com mais de 10 digitos, obtemos a seguinte exceção:  
+
 Exception in thread "main" java.util.InputMismatchException:   
 Isto deve-se ao fato de se tratar de um numero superior a 10.  
+
 
 Ao introduzir um numero negativa, observamos que o programa é terminado de imediato.  
 Visto que o valor é negativo no count, logo não entra no ciclo.  
 
+
 Ocorreram outros problemas mas todos semelhantes aos já apresentados.  
+
+
 
 
 
@@ -42,17 +58,23 @@ Ocorreram outros problemas mas todos semelhantes aos já apresentados.
 
 
 
+
 Ao introduzir valores além do tamanho da lista,mais de 10 numeros, obtemos esta exceção:  
+
 IndexError: list assignment index out of range  
+
 Deve-se ao fato de existir uma variável inicial que indica o tamanho do buffer como sendo de 10 posiçoes e nada mais que isso.  
  
+
 Ao introduzir valores de comprimento exagerado observamos que não ocorre qualquer erro ou exceção, diferente da versão em java.  
 Tal ocorrencia, deve-se pelo fato que os numeros inteiros Python tem uma precisao arbitraria, deste modo a possibilidade de Overflow é nula.  
 
 
 
 Ao introduzir um valor exagerado no primeiro input, obtemos este erro:  
+
 OverflowError: range() result has too many items  
+
 Acontece pois o range() acaba por devolver demasiados resultados possíveis, logo havendo Overflow.  
 
 Ao inserir valor negativo o programa termina de imediato.  
@@ -63,7 +85,9 @@ sendo este, talvéz a parte mais suscetível em termos de segurança.
 
 
 
+
 #### C++
+
 
 
 
@@ -78,7 +102,11 @@ os erros apresentados são bastante semelhantes mesmo tratando-se de 3 linguagen
 
 
 
+
+
 ### Pergunta 1.2 – Buffer Overflow
+
+
 
 Inicialmente é necessario analisar os scripts de modo a conseguir apurar qual a vulnerabilidade  
 de Buffer Overflow existente e ainda o que tem de se fazer para explorar e obter as respetivas confirmaçoes e mensagens.  
@@ -86,25 +114,40 @@ Numa primeira execuçao do programa a IDE informa-nos do uso de funçoes “gets
 sendo estas perigosas e que não deveriam ser utilizadas. Desde logo,   
 verificamos que a vulnerabilidade Stack Buffer Overflow está presente em ambos.  
 
+
+
 #### RootExploit.C
 
+
 **Variaveis:**
+
 	o programa consta com duas variaveis:  
+
 		- pass é usada no controlo de acesso root/admin.     
 		- buff é usada para armazenar a password introduzida pelo utilizador.  
 
+
+
 **Input:**
+
 	o programa solicita que o utilizador insira uma password de root, usando a funçao gets  
 
+
+
 **Verificação:**
+
 	o programa compara essa password(string) com csi1(string), csi1 corresponde à password válida.  
 	Só serão dadas as permissoes de root/admin, quando pass tiver valor 1.  
+
 
 Com isto já podemos tirar algumas conclusoes, as variaveis inicialmente declaradas quando carregadas  
  para a stack vão do endereço mais alto para o mais baixo. Mas a escrita é feita no sentido contrario.   
 Logo é possível ver que a variável pass encontra-se em cima do buff.  
 
+
 ![imagestack](Imagens/stack.png)
+
+
 
 
 
@@ -116,11 +159,16 @@ o ultimo caracter tem de ser diferente de “0”. Se forem cumpridas todas esta
 é possível obter a confirmaçao que “Foram-lhe atribuidas permissoes de root/admin”.  
 Com a imagem a baixo é possível observar o feito.  
 
+
 ![imageroot](Imagens/root.png)
 
 
 
+
+
 #### O-simple.c
+
+
 
 Como já referido, este também sofre do mesmo problema que o RootExploit   
 (tanto no uso da função gets como na permissão de ir para alem do tamanho do buffer).   
