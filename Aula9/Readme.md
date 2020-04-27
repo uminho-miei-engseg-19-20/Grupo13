@@ -22,15 +22,15 @@ determina  o numero máximo de números no buffer.
 
 
 ![image1.1](Imagens/overflow.png)
+&nbsp;
 
 
 
-
-
+&nbsp;
 #### Java
+&nbsp;
 
-
-
+&nbsp;
 No programa java foram observadas as seguintes exceçoes:  
 
 
@@ -50,16 +50,16 @@ Visto que o valor é negativo no count, logo não entra no ciclo.
 
 
 Ocorreram outros problemas mas todos semelhantes aos já apresentados.  
+&nbsp;
 
 
 
-
-
+&nbsp;
 #### Python
+&nbsp;
 
 
-
-
+&nbsp;
 Ao introduzir valores além do tamanho da lista,mais de 10 numeros, obtemos esta exceção:  
 
 IndexError: list assignment index out of range  
@@ -82,16 +82,16 @@ Ao inserir valor negativo o programa termina de imediato.
   
 Além destes, também foi possível observar que era possível chamar funçoes no input do programa,  
 sendo este, talvéz a parte mais suscetível em termos de segurança.  
+&nbsp;
 
 
 
-
-
+&nbsp;
 #### C++
+&nbsp;
 
 
-
-
+&nbsp;
 Aqui como nos outros é verificado praticamente os mesmos erros e exceçoes que os exemplos anteriores.   
 Entre eles, o Overflow de inteiros, a introduçao de numeros negativos, inserçao de valores alem do indice 10 do buffer  
  e por ultimo a quantidade de digitos que um input pode ter, estando entre 0 e 10 digitos.  
@@ -100,25 +100,26 @@ Entre eles, o Overflow de inteiros, a introduçao de numeros negativos, inserça
 Com esta analise, podemos concluir que a falta de verificadores de input está presente em ambos os exemplos,   
 os erros apresentados são bastante semelhantes mesmo tratando-se de 3 linguagens distintas e por ultimo   
 é possível verificar diversos cenários que apresentam possíveis vulnerabilidades.  
+&nbsp;
 
 
 
-
-
+&nbsp;
 ### Pergunta 1.2 – Buffer Overflow
+&nbsp;
   
-  
-  
+&nbsp;
 Inicialmente é necessario analisar os scripts de modo a conseguir apurar qual a vulnerabilidade  
 de Buffer Overflow existente e ainda o que tem de se fazer para explorar e obter as respetivas confirmaçoes e mensagens.  
 Numa primeira execuçao do programa a IDE informa-nos do uso de funçoes “gets”,   
 sendo estas perigosas e que não deveriam ser utilizadas. Desde logo,   
 verificamos que a vulnerabilidade Stack Buffer Overflow está presente em ambos.  
+&nbsp;
 
-
-
+&nbsp;
 #### RootExploit.C
-  
+
+&nbsp; 
   
 **Variaveis:**
 
@@ -133,7 +134,7 @@ verificamos que a vulnerabilidade Stack Buffer Overflow está presente em ambos.
 
 	o programa solicita que o utilizador insira uma password de root, usando a funçao gets  
 
-
+&nbsp;
 
 **Verificação:**
 
@@ -147,11 +148,11 @@ Logo é possível ver que a variável pass encontra-se em cima do buff.
 
 
 ![imagestack](Imagens/stack.png)
+&nbsp;
 
 
 
-
-
+&nbsp;
 Deste modo, é possível verificar o espaço que a variável pass vai tomar, neste caso 4 bytes e a variável buff ocupa os 4 bytes seguintes.   
 No caso da escrita continuar, o programa consequentemnete acaba por passar fora dos limites estabelecidos para a variável buff,   
 assim sendo é possível alterar o valor da variável pass. Seguindo esta logica, o input sendo superior a 4 carateres,   
@@ -162,15 +163,15 @@ Com a imagem a baixo é possível observar o feito.
 
 
 ![imageroot](Imagens/root.png)
+&nbsp;
 
 
 
-
-
+&nbsp;
 #### O-simple.c
+&nbsp;
 
-
-
+&nbsp;
 Como já referido, este também sofre do mesmo problema que o RootExploit   
 (tanto no uso da função gets como na permissão de ir para alem do tamanho do buffer).   
 Logo o conceito de exploração é semelhante apenas diverge no valor da variável buffer,   
@@ -180,11 +181,11 @@ conseguimos alterar o valor da variável acima(control) e obtemos o print (YOU W
 ![imageroot](Imagens/youwin.png)
 
 
-
+&nbsp;
 ### Pergunta 1.3
+&nbsp;
 
-
-
+&nbsp;
 Como é possível observar na imagem a baixo, concluímos que ocorre read overflow,   
 quando não é preenchido todo o espaço que designamos pelo input.   
 Isto leva-nos a observar, caracteres inseridos nos processos de escrita antecedentes.   
@@ -196,36 +197,38 @@ Caso não seja preenchido todo o espaço, iremos ver caracteres já inseridos.
 Isto deve-se ao fato de o buffer nunca ser limpo.   
 Além disto o número de carateres que primeiramente é indicado pelo utilizador,   
 nunca é comparado com o tamanho da frase inserida.   
-
+&nbsp;
 
 
 ![imagecharint](Imagens/charinput.png)
+&nbsp;
 
-
-
+&nbsp;
 Concluímos assim que a solução para esta vulnerabilidade seria implementar   
 uma verificação entre o numero de caracteres a inserir e os que realmente são inseridos.   
+&nbsp;
 
 
-
-
+&nbsp;
 ### Pergunta 1.4
+&nbsp;
 
-
-
+&nbsp;
 Ao ter em atenção o fato do sistema UNIX ser um sistema little-endian,  
  o byte menos significativo é colocado no endereço de memória mais baixo.   
 Assim sendo, para vencer os “jogo” temos de preencher a memória do buffer com 76 carateres e   
 no fim acrescentar a sequência correspondente à sequencia 61626364 em hexadecimal(abcd).  
-
+&nbsp;
 
 ![imageyouwin](Imagens/youwin.png)
+&nbsp;
 
 
+&nbsp;
 ### Pergunta 1.5
+&nbsp;
 
-
-
+&nbsp;
 Em baixo vemos o exemplo do output do código vulnerável a buffer overflow na Heap  
 
 Aqui é copiado para a variavel "readonly" a string "laranjas"  
@@ -291,11 +294,14 @@ int main(int argc, char **argv) {
 ```
 
 }
+&nbsp;
 
-
-
+&nbsp;
 ### Pergunta 1.6
+&nbsp;
 
+
+&nbsp;
 Aqui acontece algo semelhante na questão anterior, onde acontece que a string copiada   
 poderá ser maior do que o espaço que lhe foi alocado  
 Neste caso a string a copiar poderá ter até 517 bytes de tamanho,   
