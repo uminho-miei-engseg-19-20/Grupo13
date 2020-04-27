@@ -4,6 +4,11 @@
 
 
 
+
+
+
+
+
 ### Pergunta 1.1
 
 
@@ -283,7 +288,9 @@ int main(int argc, char **argv) {
     //Podemos simplesmente usar uma opção mais segura do strcpy
     //o snprintf faz o mesmo, isto é, copia a string,
     //mas quando a string é copiada e chega ao fim
+    // o espaço disponivel na string de destino
     //é truncada colocando o character null '\0' no fim
+
     snprintf(readonly,sizeof(char) * 10,"%s", "laranjas");
     snprintf(dummy, sizeof(char) * 10,"%s", argv[1]);
     printf("%s\n", readonly);
@@ -300,7 +307,7 @@ poderá ser maior do que o espaço que lhe foi alocado
 Neste caso a string a copiar poderá ter até 517 bytes de tamanho,   
 sendo que a string de destino apenas conterá 24 bytes de espaço disponivel  
 Como tal empregamos a mesma função do que anteriormente, substituindo a função strcpy()   
-pela snprintf() que nao irá permitir que a string copiada passe   
+pela snprintf() que não irá permitir que a string copiada passe   
 o tamanho alocado na string de destino  
 
 Em baixo fica o codigo com a alteração feita
