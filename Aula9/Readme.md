@@ -2,19 +2,13 @@
 
 
 
-
-
-
-
-
-
-
+&nbsp;
 ### Pergunta 1.1
 
 
 
 
-
+&nbsp;
 O algoritmo tem o comportamento de armazenar numa lista(buffer) uma quantidade   
 de numeros que são pedidos no inicio tantos numeros quantos aqueles que são colocados.   
 Comparando o mesmo programa em três línguas distintas, verificamos essencialmente diferenças que caracterizam cada linguagem.   
