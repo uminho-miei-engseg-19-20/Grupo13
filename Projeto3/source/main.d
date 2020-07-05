@@ -48,7 +48,7 @@ void main(string[] args)
     'TestAll' ou 'test'
         testa automaticamente a sequência de comandos GetCertificate, CCMovelSign e ValidateOtp, \n verificando no final a assinatura, baseado na assinatura recebida, na hash gerada e na chave pública do certificado recebido.
 ");
-
+		}
 	if(args.length > 2)
 	{
 		
@@ -118,7 +118,7 @@ void main(string[] args)
 				}
 			
 			}
-	}
+	
 
 	
 
