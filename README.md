@@ -32,4 +32,20 @@ Bata os ovos com o açúcar até ficarem esbranquiçados.
 Junte a farinha peneirada e o fermento, envolva e, de seguida, adicione a manteiga e bata muito bem.  
 Por fim, junte a raspa e o sumo do limão e envolva.  
 Coloque a massa numa forma, previamente untada com manteiga e polvilhada com farinha, e leve ao forno, pré-aquecido a 180ºc,   
-durante cerca de 25 minutos. Retire, desenforme e sirva  
+durante cerca de 25 minutos. Retire, desenforme e sirva            
+   
+      
+**Bolo de maça do Carlos**   
+Farinha a olho 
+ovos a olho  
+açucar a puxar po salgado  
+pouca manteiga  
+leite a olho  
+fermento também a olho  
+canela aos pacotes    
+maças tambem pode ser a olho, mas pouco a fugir po muito    
+**Em caso de duvidas nas medidas, é botar a olho**  
+Preparação  
+Coloca a massa com gromos num copo de plastico e queimar o fundo com o esqueiro, até acabar o gás  
+servir com arroz e batata frita de pacote
+
