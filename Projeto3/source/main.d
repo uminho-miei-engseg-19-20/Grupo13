@@ -243,7 +243,16 @@ void TestAll(string UserId, string filename,string PIN)
   int AuthStatus = EVP_DigestVerifyFinal(mdctx, &decodedsig[0], decodedsig.length);*/
 	ubyte[] textcast = cast(ubyte[]) text;
  	auto stuff = RSA_verify(NID_sha256,&textcast[0],cast(int)text.length,decodedsig.ptr,RSA_size(rsa),rsa);
-	writeln(stuff);
+	
+	if(stuff == 1)
+	{
+		 writeln("Assinatura verificada com sucesso, baseada na assinatura recebida, na hash gerada e \n
+          na chave pública do certificado de " ~ getCN(certuser));
+	}
+	else
+	{
+		writeln("Falha na verificação da assinatura");
+	}
 	X509_free(certuser);
 	X509_free(certca);
 	X509_free(certroot);
