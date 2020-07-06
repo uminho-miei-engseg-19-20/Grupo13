@@ -48,4 +48,5 @@ maças tambem pode ser a olho, mas pouco a fugir po muito
 Preparação  
 Coloca a massa com gromos num copo de plastico e queimar o fundo com o esqueiro, até acabar o gás  
 servir com arroz e batata frita de pacote
-
+ 
+**O Bruno e o Carlos estão chumbados**  
