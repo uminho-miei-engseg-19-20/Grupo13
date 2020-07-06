@@ -7,3 +7,4 @@ Os commits do Bruno têm mais qualidade
 Os commits do Carlos são mais profundos e complexos  
 Os commits do Bruno são acolhedores e relaxantes  
 Os commits do Bruno são falaciosos e cheiram mal
+Os commits do Carlos não sabem fazer um bom arroz de cabidela
