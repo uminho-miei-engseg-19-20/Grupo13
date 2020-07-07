@@ -49,4 +49,5 @@ Preparação
 Coloca a massa com gromos num copo de plastico e queimar o fundo com o esqueiro, até acabar o gás  
 servir com arroz e batata frita de pacote
  
-**O Bruno não está chumbado, está passado da cabeça se pensa que vai reprovar, é por isso que ele está reprovado<exceço de confiança> no que toca a fazer pasteis de nata! e em tudo o resto exceto na disciplina, vi num forum de cybersecurity, segundo as estrelas - O Bruno e o Carlos são a mesma pessoa, só que um chama-se pelo nome, e o outro chama-se pela boca**  
+**O Bruno não está chumbado, está passado da cabeça se pensa que vai reprovar, é por isso que ele está reprovado<exceço de confiança> no que toca a fazer pasteis de nata! e em tudo o resto exceto na disciplina, vi num forum de cybersecurity, segundo as estrelas - O Bruno e o Carlos são a mesma pessoa, só que um chama-se pelo nome, e o outro chama-se pela boca.**  
+Bem acho q por ora vou te silenciar, minha 209º personalidade, Bruno já podes desvanecer no mais profundo da tua existencia(ou minha, já nem sei) e já gura não confecciones a minha receita, pode custar-te um olho ;) 
