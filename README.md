@@ -49,4 +49,4 @@ Preparação
 Coloca a massa com gromos num copo de plastico e queimar o fundo com o esqueiro, até acabar o gás  
 servir com arroz e batata frita de pacote
  
-**O Bruno não está chumbado, está passado da cabeça se pensa que vai reprovar, é por isso que ele está reprovado<exceço de confiança> no que toca a fazer pasteis de nata! e em tudo o resto exceto na disciplina, vi num forum de cybersecurity**  
+**O Bruno não está chumbado, está passado da cabeça se pensa que vai reprovar, é por isso que ele está reprovado<exceço de confiança> no que toca a fazer pasteis de nata! e em tudo o resto exceto na disciplina, vi num forum de cybersecurity, segundo as estrelas - O Bruno e o Carlos são a mesma pessoa**  
