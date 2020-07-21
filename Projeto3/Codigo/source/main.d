@@ -17,6 +17,7 @@ import core.stdc.stdlib:exit;
 import std.file;
 import std.digest.sha;
 import std.base64;
+import std.regex;
  
 
 
