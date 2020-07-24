@@ -17,6 +17,7 @@ import core.stdc.stdlib:exit;
 import std.file;
 import std.digest.sha;
 import std.base64;
+import std.regex;
  
 
 
@@ -27,6 +28,34 @@ extern (C)
     X509* PEM_read_bio_X509(BIO* bp, X509** x, pem_password_cb* callback, void* u);
 	EVP_MD_CTX *EVP_MD_CTX_new();
 }
+//ADIÇAO DO CODIGO APRESENTADO NO RELATORIO
+//Mensagem Erro sempre que parametros Errados 
+string msgError(){
+   string error = ("Parametros errados!");
+   return error;
+}
+//Verificacao do user ID com regex
+string getUserId(string user_ID){
+   pattern = "^(\+?351)?9\d\d{7}$";
+   if(user_ID.length == 13){
+      if(pattern.match(user_ID)){
+         writeln("UserID Valido!");
+         string UserID = user_ID;
+         return UserID;
+      }
+   }
+   else{return msgError();}
+}
+//Verificacao do PIN apenas pelo numero de caracteres
+string getPin(string str_Pin){
+   if(str_Pin.length == 4){
+      writeln("Pin Valido!");
+      string PIN = str_Pin;
+      return PIN;
+   }
+   else{return msgError();}
+}
+//FALTAVA CHAMAR ESTAS FUNÇOES - Diferença de Versoes do Trabalho
 
 //unica a ser hardcoded é esta
 string AppId = "b826359c-06f8-425e-8ec3-50a97a418916";
